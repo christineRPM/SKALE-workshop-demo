@@ -1,0 +1,571 @@
+{
+  "contractName": "Killable",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
+      "outputs": [],
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "kill",
+      "outputs": [],
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.8+commit.23d335f2\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":false,\"inputs\":[],\"name\":\"kill\",\"outputs\":[],\"payable\":true,\"stateMutability\":\"payable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"payable\":true,\"stateMutability\":\"payable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/Users/christine/Desktop/SKALE-workshop-demo/contracts/zeppelin/lifecycle/Killable.sol\":\"Killable\"},\"evmVersion\":\"petersburg\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/Users/christine/Desktop/SKALE-workshop-demo/contracts/zeppelin/lifecycle/Killable.sol\":{\"keccak256\":\"0x31412fb95561a49514b61cde6062eb1decc217c920d52a160e976e0f509c47f3\",\"urls\":[\"bzzr://c6ff8394936f8f590638d5cc787d3ec44dfd6666c02ed58ca4a8249801ded27f\"]},\"/Users/christine/Desktop/SKALE-workshop-demo/contracts/zeppelin/ownership/Ownable.sol\":{\"keccak256\":\"0x9b02e4a4e373b6950ab77d1c9d29694735dc0ac5baae384d09e079e241a6be02\",\"urls\":[\"bzzr://e7733255b656ca8acf8954368099858b2b06f13d8759b6032ffa1bc077297b8d\"]}},\"version\":1}",
+  "bytecode": "0x608060405260008060006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550336000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055506102e4806100946000396000f3fe6080604052600436106100345760003560e01c806341c0e1b5146100395780638da5cb5b14610043578063f2fde38b1461009a575b600080fd5b6100416100de565b005b34801561004f57600080fd5b506100586101c5565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6100dc600480360360208110156100b057600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506101ea565b005b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614156101c3576000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614156101c2576000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16ff5b5b565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614156102b557600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff16146102b457806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505b5b5056fea165627a7a72305820552ca9842041c3bbbbbb1bef760536468c2fd76cb531e8ea352bf672fa90a1c80029",
+  "deployedBytecode": "0x6080604052600436106100345760003560e01c806341c0e1b5146100395780638da5cb5b14610043578063f2fde38b1461009a575b600080fd5b6100416100de565b005b34801561004f57600080fd5b506100586101c5565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6100dc600480360360208110156100b057600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff1690602001909291905050506101ea565b005b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614156101c3576000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614156101c2576000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16ff5b5b565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614156102b557600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff16146102b457806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505b5b5056fea165627a7a72305820552ca9842041c3bbbbbb1bef760536468c2fd76cb531e8ea352bf672fa90a1c80029",
+  "sourceMap": "179:131:2:-;;;256:1:3;217:41;;;;;;;;;;;;;;;;;;;;298:10;290:5;;:18;;;;;;;;;;;;;;;;;;179:131:2;;;;;;",
+  "deployedSourceMap": "179:131:2:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;212:96;;;:::i;:::-;;217:41:3;;8:9:-1;5:2;;;30:1;27;20:12;5:2;217:41:3;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;385:133;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;385:133:3;;;;;;;;;;;;;;;;;;;:::i;:::-;;212:96:2;362:5:3;;;;;;;;;;;348:19;;:10;:19;;;344:32;;;277:5:2;;;;;;;;;;;263:19;;:10;:19;;;259:44;;;297:5;;;;;;;;;;;284:19;;;259:44;344:32:3;212:96:2:o;217:41:3:-;;;;;;;;;;;;;:::o;385:133::-;362:5;;;;;;;;;;;348:19;;:10;:19;;;344:32;;;493:1;473:22;;:8;:22;;;469:44;;505:8;497:5;;:16;;;;;;;;;;;;;;;;;;469:44;344:32;385:133;:::o",
+  "source": "pragma solidity >=0.4.4;\n\nimport \"./../ownership/Ownable.sol\";\n\n\n/*\n * Killable\n * Base contract that can be killed by owner. All funds in contract will be sent to the owner.\n */\ncontract Killable is Ownable {\n  function kill() payable public onlyOwner {\n    if (msg.sender == owner) selfdestruct(owner);\n  }\n}\n",
+  "sourcePath": "/Users/christine/Desktop/SKALE-workshop-demo/contracts/zeppelin/lifecycle/Killable.sol",
+  "ast": {
+    "absolutePath": "/Users/christine/Desktop/SKALE-workshop-demo/contracts/zeppelin/lifecycle/Killable.sol",
+    "exportedSymbols": {
+      "Killable": [
+        702
+      ]
+    },
+    "id": 703,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 683,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".4"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:2"
+      },
+      {
+        "absolutePath": "/Users/christine/Desktop/SKALE-workshop-demo/contracts/zeppelin/ownership/Ownable.sol",
+        "file": "./../ownership/Ownable.sol",
+        "id": 684,
+        "nodeType": "ImportDirective",
+        "scope": 703,
+        "sourceUnit": 747,
+        "src": "26:36:2",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 685,
+              "name": "Ownable",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 746,
+              "src": "200:7:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Ownable_$746",
+                "typeString": "contract Ownable"
+              }
+            },
+            "id": 686,
+            "nodeType": "InheritanceSpecifier",
+            "src": "200:7:2"
+          }
+        ],
+        "contractDependencies": [
+          746
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 702,
+        "linearizedBaseContracts": [
+          702,
+          746
+        ],
+        "name": "Killable",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 700,
+              "nodeType": "Block",
+              "src": "253:55:2",
+              "statements": [
+                {
+                  "condition": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_address_payable",
+                      "typeString": "address payable"
+                    },
+                    "id": 694,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 691,
+                        "name": "msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 761,
+                        "src": "263:3:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_message",
+                          "typeString": "msg"
+                        }
+                      },
+                      "id": 692,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "sender",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "263:10:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address_payable",
+                        "typeString": "address payable"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "==",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "id": 693,
+                      "name": "owner",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 709,
+                      "src": "277:5:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address_payable",
+                        "typeString": "address payable"
+                      }
+                    },
+                    "src": "263:19:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody": null,
+                  "id": 699,
+                  "nodeType": "IfStatement",
+                  "src": "259:44:2",
+                  "trueBody": {
+                    "expression": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 696,
+                          "name": "owner",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 709,
+                          "src": "297:5:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address_payable",
+                            "typeString": "address payable"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_address_payable",
+                            "typeString": "address payable"
+                          }
+                        ],
+                        "id": 695,
+                        "name": "selfdestruct",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 769,
+                        "src": "284:12:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_selfdestruct_nonpayable$_t_address_payable_$returns$__$",
+                          "typeString": "function (address payable)"
+                        }
+                      },
+                      "id": 697,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "284:19:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_tuple$__$",
+                        "typeString": "tuple()"
+                      }
+                    },
+                    "id": 698,
+                    "nodeType": "ExpressionStatement",
+                    "src": "284:19:2"
+                  }
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 701,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 689,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 688,
+                  "name": "onlyOwner",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 727,
+                  "src": "243:9:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "243:9:2"
+              }
+            ],
+            "name": "kill",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 687,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "225:2:2"
+            },
+            "returnParameters": {
+              "id": 690,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "253:0:2"
+            },
+            "scope": 702,
+            "src": "212:96:2",
+            "stateMutability": "payable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 703,
+        "src": "179:131:2"
+      }
+    ],
+    "src": "0:311:2"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/christine/Desktop/SKALE-workshop-demo/contracts/zeppelin/lifecycle/Killable.sol",
+    "exportedSymbols": {
+      "Killable": [
+        702
+      ]
+    },
+    "id": 703,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 683,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".4"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:2"
+      },
+      {
+        "absolutePath": "/Users/christine/Desktop/SKALE-workshop-demo/contracts/zeppelin/ownership/Ownable.sol",
+        "file": "./../ownership/Ownable.sol",
+        "id": 684,
+        "nodeType": "ImportDirective",
+        "scope": 703,
+        "sourceUnit": 747,
+        "src": "26:36:2",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 685,
+              "name": "Ownable",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 746,
+              "src": "200:7:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Ownable_$746",
+                "typeString": "contract Ownable"
+              }
+            },
+            "id": 686,
+            "nodeType": "InheritanceSpecifier",
+            "src": "200:7:2"
+          }
+        ],
+        "contractDependencies": [
+          746
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 702,
+        "linearizedBaseContracts": [
+          702,
+          746
+        ],
+        "name": "Killable",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 700,
+              "nodeType": "Block",
+              "src": "253:55:2",
+              "statements": [
+                {
+                  "condition": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_address_payable",
+                      "typeString": "address payable"
+                    },
+                    "id": 694,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 691,
+                        "name": "msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 761,
+                        "src": "263:3:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_message",
+                          "typeString": "msg"
+                        }
+                      },
+                      "id": 692,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "sender",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "263:10:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address_payable",
+                        "typeString": "address payable"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "==",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "id": 693,
+                      "name": "owner",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 709,
+                      "src": "277:5:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address_payable",
+                        "typeString": "address payable"
+                      }
+                    },
+                    "src": "263:19:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody": null,
+                  "id": 699,
+                  "nodeType": "IfStatement",
+                  "src": "259:44:2",
+                  "trueBody": {
+                    "expression": {
+                      "argumentTypes": null,
+                      "arguments": [
+                        {
+                          "argumentTypes": null,
+                          "id": 696,
+                          "name": "owner",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 709,
+                          "src": "297:5:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_address_payable",
+                            "typeString": "address payable"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_address_payable",
+                            "typeString": "address payable"
+                          }
+                        ],
+                        "id": 695,
+                        "name": "selfdestruct",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 769,
+                        "src": "284:12:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_selfdestruct_nonpayable$_t_address_payable_$returns$__$",
+                          "typeString": "function (address payable)"
+                        }
+                      },
+                      "id": 697,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "284:19:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_tuple$__$",
+                        "typeString": "tuple()"
+                      }
+                    },
+                    "id": 698,
+                    "nodeType": "ExpressionStatement",
+                    "src": "284:19:2"
+                  }
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 701,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "arguments": null,
+                "id": 689,
+                "modifierName": {
+                  "argumentTypes": null,
+                  "id": 688,
+                  "name": "onlyOwner",
+                  "nodeType": "Identifier",
+                  "overloadedDeclarations": [],
+                  "referencedDeclaration": 727,
+                  "src": "243:9:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_modifier$__$",
+                    "typeString": "modifier ()"
+                  }
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "243:9:2"
+              }
+            ],
+            "name": "kill",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 687,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "225:2:2"
+            },
+            "returnParameters": {
+              "id": 690,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "253:0:2"
+            },
+            "scope": 702,
+            "src": "212:96:2",
+            "stateMutability": "payable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 703,
+        "src": "179:131:2"
+      }
+    ],
+    "src": "0:311:2"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.8+commit.23d335f2.Emscripten.clang"
+  },
+  "networks": {
+    "1": {
+      "events": {},
+      "links": {},
+      "address": "0x6e16EaF5fe2e80e6548e4b81122C3962847164cB",
+      "transactionHash": "0x28a755e2bcf397406795e3ad219dd503a0b8e234ffc35749196e5c91939c82e7"
+    },
+    "4": {
+      "events": {},
+      "links": {},
+      "address": "0xE1787921Dc50afeC0FFA992e771A3B4F7b0E4D63",
+      "transactionHash": "0x7dc05796656cbfa7a16fe20a5017da2bc326f71c5f62135daab0b0b630569074"
+    }
+  },
+  "schemaVersion": "3.0.15",
+  "updatedAt": "2019-12-11T19:48:53.857Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
