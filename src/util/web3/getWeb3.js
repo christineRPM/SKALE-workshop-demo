@@ -36,7 +36,7 @@ export let getWeb3 = new Promise(function(resolve, reject) {
     }
 
     const mySKALEChain = {
-      nodeUrl: "https://sip2211-0.skalenodes.com:10183",
+      nodeUrl: process.env.SKALE_CHAIN,
       chainId: 1,
       nodeProtocol: 'rpc',
     };
